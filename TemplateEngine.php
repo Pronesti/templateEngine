@@ -26,7 +26,6 @@ class TemplateEngine
             $brackets = "{{" . $brackets . "}}";
             $newHtml = str_replace($brackets, $replacement, $newHtml);
         }
-        $newHtml = preg_replace("/{{.+}}/", "", $newHtml);
-        return $newHtml;
+        return preg_replace("/{{.+}}/", "", $newHtml);
     }
 }
